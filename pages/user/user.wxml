@@ -1,0 +1,121 @@
+<view class="page">
+  <view class="page__bd">
+    <!-- 用户登录 -->
+    <view class="userinfo">
+      <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
+        <view class="userinfo-avatar" bindtap="bindViewTap">
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <open-data type="userNickName"></open-data>
+      </block>
+      <block wx:elif="{{!hasUserInfo}}">
+        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+        <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+      </block>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    <!-- 余额，积分，优惠券 -->
+    <!-- <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <navigator open-type="navigate">
+            <text style="display:block">0.00</text>
+            <text style="display:block">余额</text>
+          </navigator>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <navigator>
+            <text style="display:block">0</text>
+            <text style="display:block">积分</text>
+          </navigator>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <navigator>
+            <text style="display:block">0</text>
+            <text style="display:block">优惠券</text>
+          </navigator>
+        </view>
+      </view>
+    </view> -->
+    <!-- 订单信息 -->
+    <mp-cells>
+      <mp-cell link url="" value="订单信息" footer="查看全部订单"></mp-cell>
+    </mp-cells>
+    <!-- 各种订单信息 -->
+    <view class="orderDetail">
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <navigator open-type="navigate">
+              <mp-icon icon="album" color="black" size="20"></mp-icon>
+              <text style="display:block">待付款</text>
+            </navigator>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <navigator>
+              <mp-icon icon="album" color="black" size="20"></mp-icon>
+              <text style="display:block">待发货</text>
+            </navigator>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <navigator>
+              <mp-icon icon="album" color="black" size="20"></mp-icon>
+              <text style="display:block">待收货</text>
+            </navigator>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <navigator>
+              <mp-icon icon="album" color="black" size="20"></mp-icon>
+              <text style="display:block">待评价</text>
+            </navigator>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <navigator>
+              <mp-icon icon="album" color="black" size="20"></mp-icon>
+              <text style="display:block">退款/售后</text>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 优惠券 -->
+    <view>
+      <mp-cells>
+        <!-- <mp-cell link url="../index" value="我的优惠券">
+          <image slot="icon" src="../../icons/user.png"
+            style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;">
+          </image>
+        </mp-cell>
+        <mp-cell link url="../index" value="积分商城">
+          <image slot="icon" src="../../icons/user.png"
+            style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;">
+          </image>
+        </mp-cell> -->
+        <!-- <mp-cell link url="../index" value="账户与安全">
+          <image slot="icon" src="../../icons/user.png"
+            style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;">
+          </image>
+        </mp-cell> -->
+      </mp-cells>
+    </view>
+
+
+  </view>
+
+</view>

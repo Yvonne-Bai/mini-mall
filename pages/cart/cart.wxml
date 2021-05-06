@@ -1,0 +1,49 @@
+<view class="page">
+  <view hidden="{{value!=0}}">
+    <view class="page__bd" class="cart">
+      <image src="../../icons/cart.png" mode='aspectFit' style="width: 100px; height: 100px"></image>
+      <navigator class="goShopping" target="self" open-type="switchTab" url="../../pages/index/index">去首页逛逛</navigator>
+    </view>
+    
+  </view>
+
+  <!-- 有货物的购物车 -->
+  <view hidden="{{value==0}}">
+    <van-card price="{{bagPrice}}" desc="已选颜色：{{color}}" title="长链条斜挎包长链条斜挎包" thumb="{{ imageURL }}">
+      <view slot="footer">
+        <van-stepper value="{{value}}" min="0" bind:change="stepChange">
+        </van-stepper>
+      </view>
+    </van-card>
+
+    <van-goods-action>
+      <van-goods-action-button text="加入购物车" type="warning" bind:click="onClickButton" />
+      <van-goods-action-button text="立即购买" bind:click="onClickButton" />
+    </van-goods-action>
+
+    <van-submit-bar price="{{ 1000*value}}" button-text="去结算" bind:submit="onClickButton" tip="{{ true }}">
+    </van-submit-bar>
+  </view>
+  <!-- 为您推荐 -->
+  <view style="margin-top:120px"></view>
+  <view class="page__bd page__bd_spacing">
+      <text>---------------为您推荐---------------</text>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <navigator open-type="navigate" url="/pages/bag/bag">
+              <image src="../../icons/lake.jpg" mode="widthFix" style='width:46vw'></image>
+            </navigator>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <navigator open-type="navigate" url="/pages/bag/bag">
+              <image src="../../icons/lake.jpg" mode="widthFix" style='width:46vw'></image>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+
+</view>

@@ -1,0 +1,28 @@
+.placeholder {
+  margin: 1px;
+  text-align: center;
+  height: 3em;
+  color: var(--weui-FG-1);
+}
+.orderDetail{
+  font-size: 12px;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.weui-flex{
+  border-top: 1px solid rgb(243, 241, 241);
+}

@@ -1,0 +1,19 @@
+.cart{
+  text-align: center;
+}
+.goShopping{
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  background-color: rgba(0,206,209);
+  margin: 30rpx auto;
+}
+.placeholder {
+  margin: 0.5vw;
+  text-align: center;
+  background-color: var(--weui-BG-0);
+  color: var(--weui-FG-1);
+}
+.page__bd{
+  text-align: center;
+}

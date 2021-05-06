@@ -1,0 +1,13 @@
+.placeholder {
+    text-align: center;
+    background-color: var(--weui-BG-0);
+    color: var(--weui-FG-1);
+    height: 100%;
+}
+.page__bd{
+    text-align: center;
+}
+.category{
+    border: 1px dashed #FF7F50;
+    border-radius: 10px;
+}

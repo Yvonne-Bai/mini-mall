@@ -1,0 +1,97 @@
+<view class="page">
+    <view class="page__bd">
+        <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+    </view>
+    <view class="page__bd">
+        <swiper autoplay="true" indicator-dots="true" indicator-active-color="rgba(0,206,209)" circular="true"
+            style="height:240px">
+            <swiper-item>
+                <navigator open-type="navigate" url="/pages/bag/bag">
+                    <image style="width:100vw" src="../../icons/yinghua.jpg"></image>
+                </navigator>
+            </swiper-item>
+            <swiper-item>
+                <navigator open-type="navigate" url="/pages/bag/bag">
+                    <image style="width:100vw" src="../../icons/lake.jpg"></image>
+                </navigator>
+            </swiper-item>
+            <swiper-item>
+                <navigator open-type="navigate" url="/pages/bag/bag">
+                    <image style="width:100vw" src="../../icons/yinghua.jpg"></image>
+                </navigator>
+            </swiper-item>
+            <swiper-item>
+                <navigator open-type="navigate" url="/pages/bag/bag">
+                    <image style="width:100vw" src="../../icons/lake.jpg"></image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view  class="page__bd">
+        <van-row gutter="20">
+            <van-col span="8" custom-class="category">饰品配饰</van-col>
+            <van-col span="8" custom-class="category">美妆个护</van-col>
+            <van-col span="8" custom-class="category">家居内衣</van-col>
+        </van-row>
+        <van-row gutter="20">
+            <van-col span="8" custom-class="category">家居百货</van-col>
+            <van-col span="8" custom-class="category">时尚鞋靴</van-col>
+            <van-col span="8" custom-class="category">出行用品</van-col>
+        </van-row>
+        <van-row gutter="20">
+            <van-col span="8" custom-class="category">潮流玩具</van-col>
+            <van-col span="8" custom-class="category">创意文具</van-col>
+            <van-col span="8" custom-class="category">电子生活</van-col>
+        </van-row>
+    </view>
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder">
+                    <navigator open-type="navigate" url="/pages/bag/bag">
+                        <image src="../../icons/lake.jpg" mode="widthFix" style='width:46vw'></image>
+                    </navigator>
+                </view>
+            </view>
+            <view class="weui-flex__item">
+                <view class="placeholder">
+                    <navigator open-type="navigate" url="/pages/bag/bag">
+                        <image src="../../icons/lake.jpg" mode="widthFix" style='width:46vw'></image>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder">
+                    <navigator open-type="navigate" url="/pages/bag/bag">
+                        <image src="../../icons/lake.jpg" mode="widthFix" style='width:46vw'></image>
+                    </navigator>
+                </view>
+            </view>
+            <view class="weui-flex__item">
+                <view class="placeholder">
+                    <navigator open-type="navigate" url="/pages/bag/bag">
+                        <image src="../../icons/lake.jpg" mode="widthFix" style='width:46vw'></image>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder">
+                    <navigator open-type="navigate" url="/pages/bag/bag">
+                        <image src="../../icons/lake.jpg" mode="widthFix" style='width:46vw'></image>
+                    </navigator>
+                </view>
+            </view>
+            <view class="weui-flex__item">
+                <view class="placeholder">
+                    <navigator open-type="navigate" url="/pages/bag/bag">
+                        <image src="../../icons/lake.jpg" mode="widthFix" style='width:46vw'></image>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

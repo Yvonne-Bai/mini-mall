@@ -1,0 +1,128 @@
+<view class="page">
+  <view class="page__bd" style="background-color:{{pgbd-color}}">
+    <swiper indicator-dots="true" indicator-active-color="rgba(0,206,209)" circular="true" style="height:240px">
+      <swiper-item>
+        <navigator open-type="switchTab" url="/pages/category/category">
+          <image style="width:100vw" src="../../icons/yinghua.jpg"></image>
+        </navigator>
+      </swiper-item>
+      <swiper-item>
+        <navigator>
+          <image style="width:100vw" src="../../icons/lake.jpg"></image>
+        </navigator>
+      </swiper-item>
+      <swiper-item>
+        <navigator>
+          <image style="width:100vw" src="../../icons/yinghua.jpg"></image>
+        </navigator>
+      </swiper-item>
+      <swiper-item>
+        <navigator>
+          <image style="width:100vw" src="../../icons/lake.jpg"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+    <view>
+      <view>长链条休闲包包长链条休闲包包长链条休闲包包长链条休闲包包长链条休闲包包</view>
+      <text>销售价{{bagPrice}}</text>
+    </view>
+
+    <!-- <button class="weui-btn" bindtap="open"
+      style="width:100vw;color:black;font-size:28rpx;background-color:white;border:1px solid lightgray">
+      <text style="float:left">规格</text>
+      <view style="float:right">
+        <text>请选择颜色、数量</text>
+        <image slot="icon" src="../../icons/user.png"
+          style="margin: 0 16px;vertical-align: middle;width:20px; height: 20px;">
+        </image>
+      </view>
+    </button> -->
+    <van-cell title="规格" is-link value="请选择颜色、数量" bind:click="showPopup" />
+    <!-- 底部tab栏，加入购物车，购买 -->
+    <van-goods-action>
+      <van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickIcon" />
+      <navigator open-type="switchTab" url="/pages/cart/cart">
+        <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickIcon" />
+      </navigator>
+      <van-goods-action-button text="加入购物车" type="warning" bind:click="showPopup" />
+      <van-goods-action-button text="立即购买" bind:click="showPopup" />
+    </van-goods-action>
+
+  </view>
+
+  <!-- 弹窗 -->
+
+  <view class="page__bd">
+    <van-popup show="{{ show }}" position="bottom" custom-style="height: 40%;" bind:close="onClose" closeable round>
+
+      <van-card price="{{bagPrice}}" desc="库存{{inventory}}" title="长链条斜挎包长链条斜挎包" thumb="{{ imageURL }}">
+        <!-- <view slot="footer" style="display:flex;align-item:center;padding:5px">
+          <view>请选择颜色</view>
+          <view style="padding: 0 5px;border:1px solid black">黄色</view>
+          <view style="padding: 0 5px;border:1px solid black">紫色</view>
+        </view> -->
+      </van-card>
+      <van-cell title="请选择颜色">
+        <view>
+          <van-button plain type="{{btnYellow}}" size="small" bindtap="chooseYellow">黄色</van-button>
+          <van-button plain type="{{btnRed}}" size="small" bindtap="chooseRed">红色</van-button>
+        </view>
+      </van-cell>
+      <van-cell title="购买数量">
+        <view>
+          <van-stepper value="1" min="1" bind:change="stepChange" />
+        </view>
+      </van-cell>
+      <van-goods-action>
+        <van-goods-action-button text="加入购物车" type="warning"  bind:tap="importCart"/>
+        <van-goods-action-button text="立即购买" bind:click="onClickButton" />
+      </van-goods-action>
+    </van-popup>
+
+    <!-- <view class="addGoods"
+      style="width:100vw;height:150px;z-index:9999;border:1px solid lightgray;position:absolute;bottom:50px;padding:20px"
+      hidden="{{notshow}}">
+
+      <view style="display:flex">
+        <image src="../../icons/lake.jpg" style="width:80px;height:80px;display:inline-block"></image>
+        <view>
+          <view>
+            <text> 销售价 ¥ </text><text>{{bagPrice}}</text>
+          </view>
+          <view style="display:block">
+            <text> 库存 </text><text>{{inventory}}</text>
+          </view>
+          <view style="display:block">
+            <text> 请选择颜色 </text><text>{{chooseColor}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view>
+        <view class="page-section page-section-gap">
+          <radio-group name="radio">
+            <label>
+              <radio value="radio1" checked="true" />黄色</label>
+            <label>
+              <radio value="radio2" />紫色</label>
+          </radio-group>
+        </view>
+      </view>
+
+      <view>
+        <text>购买数量</text>
+        <button type="mini"> - </button> <text>1</text> <button type="mini"> + </button>
+      </view>
+
+      <van-goods-action>
+        <van-goods-action-button text="加入购物车" type="warning" bind:click="onClickButton" />
+        <van-goods-action-button text="立即购买" bind:click="onClickButton" />
+      </van-goods-action>
+
+    </view> -->
+
+  </view>
+
+
+
+</view>
